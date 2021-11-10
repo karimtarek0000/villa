@@ -1,19 +1,16 @@
 ////////////////////////////
-// 1) - Themes
-
-// Theme Colors maps
-$themes: ();
-
-////////////////////////////
-// 2) - Fonts
+// 1) - Fonts
 //
 $baseFont: "ArbFONTS";
 
 $font: (
-  family: '',
+  family: "",
   weight: ":wght@200",
   addWeight: (),
-  sizes: ()
+  sizes: (
+    16: 1.6rem,
+    40: 4rem,
+  ),
 );
 
 //
@@ -30,16 +27,12 @@ $customFont: (
       ext: "Light.ttf",
       weight: 400,
     ),
-    // regular: (
-    //   ext: "regular.ttf",
-    //   weight: 300,
-    // ),,,,,,,,,,,
   ),
 );
 
 // Choose color text
 // Ex => first-color second-color ..etc if null will render all themes
-$chooseColorText: ("new");
+$chooseColorText: ();
 
 // Container
 $container-max-widths: (

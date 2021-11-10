@@ -12,10 +12,10 @@ html {
   font-size: 62.5%; // 10PX / 16PX = 62.5%
 
   // // FONT SIZE LG
-  // @include BreakPoint(lg) {
-  //   // LARGE SCREEN => 9px / 16px = 56.25% => 992px
-  //   font-size: 56.25%;
-  // }
+  @include BreakPoint(lg) {
+    // LARGE SCREEN => 9px / 16px = 56.25% => 992px
+    font-size: 56.25%;
+  }
 
   // // FONT SIZE MD
   // @include BreakPoint(md) {
@@ -23,7 +23,7 @@ html {
   //   font-size: 50%;
   // }
 
-  // // FONT SIZE SM
+  // FONT SIZE SM
   // @include BreakPoint(sm) {
   //   // SMALL SCREEN => 7px / 16px = 46.875%
   //   font-size: 46.875%;
@@ -48,10 +48,224 @@ body {
 //
 html,
 body {
-  height: 100%;
+  height: 10000px;
 }
 
 // SELECTION
 ::selection {
   background-color: $colorSelection;
+}
+
+//
+.svg {
+  &__dim-1 {
+    width: 2rem;
+    height: 2rem;
+  }
+  &__dim-2 {
+    width: 10rem;
+  }
+  &__fill-equator {
+    fill: var(--bs-equator);
+  }
+}
+
+// GLOBAL
+// RESIZE IMAGE
+.resize-img {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+ul {
+  @extend .list-unstyled;
+}
+
+a {
+  @extend .d-block;
+}
+
+.btn {
+  transition: background-color 0.5s ease;
+
+  @extend .text-decoration-none,
+    .d-flex,
+    .align-items-center,
+    .justify-content-center,
+    .text-black,
+    .text-16,
+    .rounded-pill;
+
+  //
+  &-equator {
+    //
+    @include DetectHover {
+      &:hover {
+        background-color: rgba($equator, 0.8);
+      }
+    }
+  }
+  //
+  &-outline-equator {
+    svg {
+      transition: fill 0.5s ease;
+      @extend .svg__fill-equator;
+    }
+    //
+    @include DetectHover {
+      &:hover {
+        background-color: rgba($equator, 0.8);
+      }
+      &:hover svg {
+        fill: var(--bs-dark);
+      }
+    }
+  }
+}
+
+// NAVBAR
+.navbar {
+  @extend .row, .align-items-center, .justify-content-between, .py-10, .px-5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  //
+  &__items {
+    cursor: pointer;
+    //
+    @include BreakPoint(md) {
+      position: absolute;
+      min-height: 100vh;
+      width: 300px !important;
+      top: 0;
+      right: 0;
+      background-color: white;
+      transform: translateX(100%);
+    }
+
+    &--active {
+      transform: translateX(100%);
+    }
+
+    //
+    & li {
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+
+      //
+      span {
+        margin: 0 5px;
+        white-space: nowrap;
+        color: white;
+        @extend .text-16;
+      }
+    }
+  }
+}
+
+// HEADER
+.header {
+  height: 100%;
+  color: white;
+
+  > div,
+  &__content {
+    height: inherit;
+  }
+  //
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    //
+    img {
+      @extend .resize-img;
+    }
+    //
+    &::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(to right, rgba(black, 1), rgba(black, 0.8));
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+  //
+  &__content {
+    @extend .flex-column,
+      .flex-sm-row,
+      .align-items-center,
+      .justify-content-end;
+
+    //
+    &__info {
+      @extend .text-center, .text-md-end;
+
+      //
+      h1 {
+        @extend .text-40, .text-equator, .mb-40;
+        font-weight: 900;
+      }
+
+      p {
+        @extend .text-16, .col-md-9;
+        line-height: 3.5rem !important;
+      }
+    }
+
+    //
+    &__images {
+      @extend .position-relative,
+        .d-flex,
+        .justify-content-center,
+        .justify-content-sm-end,
+        .overflow-hidden,
+        .align-self-end;
+
+      @include BreakPoint(sm) {
+        height: 40vh;
+      }
+
+      & img {
+        max-width: 22vw;
+        max-height: 90vh;
+        object-fit: contain;
+
+        @include BreakPoint(lg) {
+          max-width: 30vw;
+        }
+      }
+      //
+      & img:nth-of-type(1) {
+        transform: translate(-10vw, 25rem);
+
+        @include BreakPoint(sm) {
+          transform: translate(-2rem, 2rem);
+        }
+      }
+      //
+      & img:nth-of-type(2) {
+        transform: translateY(10rem);
+        z-index: -1;
+
+        @include BreakPoint(sm) {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
 }

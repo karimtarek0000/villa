@@ -33,25 +33,25 @@
 
 @mixin BreakPoint($pointbreak) {
   @if ($pointbreak == sm) {
-    @media only screen and (min-width: 576px) {
+    @media only screen and (max-width: 576px) {
       @content;
     }
   }
 
   @if ($pointbreak == md) {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (max-width: 768px) {
       @content;
     }
   }
 
   @if ($pointbreak == lg) {
-    @media only screen and (min-width: 992px) {
+    @media only screen and (max-width: 992px) {
       @content;
     }
   }
 
   @if ($pointbreak == xlg) {
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (max-width: 1200px) {
       @content;
     }
   }

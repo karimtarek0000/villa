@@ -1,8 +1,6 @@
 // My Setup
 @import "general/designSystem";
 @import "general/others";
-@import "general/base";
-@import "themes/create_theme";
 @import "general/breakPoint";
 @import "general/media";
 
@@ -10,7 +8,8 @@
 @import "vendor/bootstrap5";
 
 // Helpers
-@import "helpers/background";
 @import "helpers/typography";
 @import "helpers/directions";
-@import "helpers/color";
+
+// 
+@import "general/base";

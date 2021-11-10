@@ -235,7 +235,7 @@ const watcher = async () => {
   // 4) - WATCH HTML
   watch(SRC_FOLDER.html, parallel(html, reload));
   // 5) - WATCH IMAGES
-  watch(SRC_FOLDER.img, { events: "add" }, imageWebp);
+  watch(`${SRC_FOLDER.img}{png,jpeg,jpg}`, { events: "add" }, imageWebp);
   // 6) - WATCH USE JAVASCRIPT MODULE
   // watch(SRC_FOLDER.js, parallel(jsDevModule, reload));
 };

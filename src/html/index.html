@@ -33,24 +33,132 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Villa</title>
   </head>
-  <body class="container">
-    <!-- START HEADER -->
-    <header>
-      <!-- START NAVBAR -->
-      <nav>
+  <body>
+    <div class="overflow-hidden">
+      <!-- START HEADER -->
+      <header style="height: 100vh">
+        <!-- START NAVBAR -->
+        <nav class="navbar container mx-auto">
+          <!-- LOGO -->
+          <a href="/" class="col-3 col-md-2">
+            <img class="img-fluid" src="./assets/img/logo.svg" alt="logo" />
+          </a>
+          <!-- ITEMS -->
+          <ul class="col-6 navbar__items d-flex flex-column flex-md-row m-0">
+            <li>
+              <svg class="svg__dim-1">
+                <use xlink:href="./assets/icons/sprite.svg#icon-question"></use>
+              </svg>
+              <span>كيف يعمل التطبيق</span>
+            </li>
+            <li>
+              <svg class="svg__dim-1">
+                <use xlink:href="./assets/icons/sprite.svg#icon-features"></use>
+              </svg>
+              <span>مميزات التطبيق</span>
+            </li>
+            <li>
+              <svg class="svg__dim-1">
+                <use
+                  xlink:href="./assets/icons/sprite.svg#icon-screens-app"
+                ></use>
+              </svg>
+              <span>شاشات التطبيق</span>
+            </li>
+          </ul>
+          <!-- DOWNLOAD APP -->
+          <a
+            style="width: 14.5rem; height: 5rem"
+            class="col-md-2 btn btn-equator"
+            href="javascript:void(0)"
+            >تحميل التطبيق</a
+          >
+          <!-- TOGGLE BUTTON -->
+          <button class="col-3 d-block d-md-none btn">
+            <svg class="svg__dim-1" style="fill: white">
+              <use xlink:href="./assets/icons/sprite.svg#icon-toggle"></use>
+            </svg>
+          </button>
+        </nav>
+        <!-- END NAVBAR -->
 
-      </nav>
-      <!-- END NAVBAR -->
-    </header>
-    <!-- END HEADER -->
+        <!-- START CONTENT HEADER -->
+        <div class="header">
+          <!-- START CONTAINER -->
+          <div class="container">
+            <!-- START IMAGE -->
+            <div class="header__image">
+              <img src="./assets/img/header.webp" alt="header" />
+            </div>
+            <!-- END IMAGE -->
 
-    <!-- START MAIN -->
-    <main></main>
-    <!-- END MAIN -->
+            <!-- START CONTENT HEADER -->
+            <div class="header__content row">
+              <!-- START INFO -->
+              <div class="header__content__info col-sm-6">
+                <h1>فيلا بمميزات خاصة</h1>
+                <p>
+                  تقدم الفيلا مجموعة من المميزات التي تجعلها مناسبة للجميع
+                  بتقسيمة غرف وخدمات أكثر من رائعة بموقع جغرافي هو الأفضل على
+                  الإطلاق
+                </p>
+                <!--  -->
+                <div
+                  class="
+                    d-flex
+                    align-items-center
+                    justify-content-center justify-content-md-start
+                    mt-40
+                  "
+                >
+                  <!-- DOWNLOAD APP -->
+                  <a
+                    style="width: 15rem; height: 5rem"
+                    class="col-md-2 btn btn-equator me-10 overflow-hidden"
+                    href="javascript:void(0)"
+                  >
+                    <svg class="svg__dim-2">
+                      <use
+                        xlink:href="./assets/icons/sprite.svg#icon-play-store"
+                      ></use>
+                    </svg>
+                  </a>
+                  <!-- DOWNLOAD APP -->
+                  <a
+                    style="width: 15rem; height: 5rem"
+                    class="col-md-2 btn btn-outline-equator overflow-hidden"
+                    href="javascript:void(0)"
+                  >
+                    <svg class="svg__dim-2">
+                      <use
+                        xlink:href="./assets/icons/sprite.svg#icon-apple-store"
+                      ></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <!-- END INFO -->
+              <div class="header__content__images col-sm-6">
+                <img src="./assets/img/4.webp" alt="2" />
+                <img src="./assets/img/2.webp" alt="2" />
+              </div>
+            </div>
+            <!-- END CONTENT HEADER -->
+          </div>
+          <!-- END CONTAINER -->
+        </div>
+        <!-- END CONTENT HEADER -->
+      </header>
+      <!-- END HEADER -->
 
-    <!-- START FOOTER -->
-    <footer></footer>
-    <!-- END FOOTER -->
+      <!-- START MAIN -->
+      <main></main>
+      <!-- END MAIN -->
+
+      <!-- START FOOTER -->
+      <footer></footer>
+      <!-- END FOOTER -->
+    </div>
     <script src="./assets/js/library/jquery.3.5.1.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
