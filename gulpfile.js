@@ -73,19 +73,21 @@ const DEST_FOLDER_PRO = {
 const styleDev = (run) => {
   //
   if (run === "sass") {
-    return src(SRC_FOLDER.styleSass)
-      .pipe(
-        plumber(function (error) {
-          console.log("Style Task Error");
-          console.log(error);
-          this.emit("end");
-        })
-      )
-      .pipe(sourceMaps.init())
-      .pipe(concat("style.css"))
-      .pipe(sass())
-      .pipe(sourceMaps.write())
-      .pipe(dest(DEST_FOLDER.style));
+    return (
+      src(SRC_FOLDER.styleSass)
+        .pipe(
+          plumber(function (error) {
+            console.log("Style Task Error");
+            console.log(error);
+            this.emit("end");
+          })
+        )
+        .pipe(sourceMaps.init())
+        // .pipe(concat("style.css"))
+        .pipe(sass())
+        .pipe(sourceMaps.write())
+        .pipe(dest(DEST_FOLDER.style))
+    );
   }
   //
   if (run === "tailwind") {
@@ -224,7 +226,7 @@ const watcher = async () => {
       SRC_FOLDER.styleTailwind,
       "./tailwind.config.js",
     ],
-    parallel(styleDev.bind(this, "tailwind"), reload)
+    parallel(styleDev.bind(this, "sass"), reload)
   );
   // 2) - WATCH JAVASCRIPT
   watch(SRC_FOLDER.js, parallel(jsDev, reload));
@@ -243,9 +245,10 @@ const watcher = async () => {
 exports.default = parallel(
   html,
   imageWebp,
-  styleDev.bind(this, "tailwind"),
+  styleDev.bind(this, "sass"),
   jsDev,
   watcher
 );
+
 // BUILD
-exports.build = parallel(styleProd, jsProd, imageMin);
+exports.build = parallel(styleProd, jsProd);

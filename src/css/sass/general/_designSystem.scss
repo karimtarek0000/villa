@@ -1,0 +1,57 @@
+////////////////////////////
+// 1) - Themes
+
+// Theme Colors maps
+$themes: ();
+
+////////////////////////////
+// 2) - Fonts
+//
+$baseFont: "ArbFONTS";
+
+$font: (
+  family: '',
+  weight: ":wght@200",
+  addWeight: (),
+  sizes: ()
+);
+
+//
+$customFont: (
+  status: true,
+  name: $baseFont,
+  src: "../fonts/ArbFONTS/",
+  weights: (
+    bold: (
+      ext: "Bold.ttf",
+      weight: 900,
+    ),
+    medium: (
+      ext: "Light.ttf",
+      weight: 400,
+    ),
+    // regular: (
+    //   ext: "regular.ttf",
+    //   weight: 300,
+    // ),,,,,,,,,,,
+  ),
+);
+
+// Choose color text
+// Ex => first-color second-color ..etc if null will render all themes
+$chooseColorText: ("new");
+
+// Container
+$container-max-widths: (
+  xl: 117.4rem,
+);
+
+////////////////////////////
+// Other
+// Prorperty Change Scroll Bar
+$colorTrack: null;
+$colorThumb: null;
+$widthTrack: null;
+
+// Change Color Selection
+$colorSelection: null;

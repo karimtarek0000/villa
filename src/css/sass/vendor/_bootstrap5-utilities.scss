@@ -1,0 +1,20 @@
+// Add your own utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    "ps": (
+      property: padding-inline-start,
+      class: ps,
+      values: (
+        4: 4rem
+      ),
+    ),
+    "ms": (
+      property: margin-inline-start,
+      class: ms,
+      values: (
+        4: 4rem
+      ),
+    ),
+  )
+);
