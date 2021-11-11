@@ -1,12 +1,18 @@
 // Default theme from bootstrap
 $equator: #e1c15d;
-
-// 
+$mine: #202020;
+$silver: #a5a5a5;
+$light: white;
+$dark: black;
+$rangitoto: #343126;
+$codGray: #131313;
+//
 $theme-colors: (
   equator: $equator,
-);
-
-//
-$spacers: (
-  1: 1,
+  mine: $mine,
+  silver: $silver,
+  light: $light,
+  rangitoto: $rangitoto,
+  codGray: $codGray,
+  dark: $dark,
 );
