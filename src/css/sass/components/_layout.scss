@@ -5,24 +5,27 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 5;
+  z-index: 4;
 
   //
   &__items {
     cursor: pointer;
+    transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.57, 0.96);
+
     //
     @include BreakPoint(md) {
-      position: absolute;
+      position: fixed;
       min-height: 100vh;
-      width: 300px !important;
+      width: 25rem !important;
       top: 0;
       right: 0;
-      background-color: white;
+      background-color: var(--bs-mine);
       transform: translateX(100%);
     }
 
     &--active {
-      transform: translateX(100%);
+      transform: translateX(0);
+      z-index: 20;
     }
 
     //
@@ -36,8 +39,15 @@
       span {
         margin: 0 5px;
         white-space: nowrap;
-        color: white;
+        color: var(--bs-light);
+        transition: color 0.5s ease;
         @extend .text-16;
+
+        @include DetectHover {
+          &:hover {
+            color: var(--bs-equator);
+          }
+        }
       }
     }
   }
@@ -85,7 +95,9 @@
 
     //
     &__info {
-      @extend .text-center, .text-md-end;
+      @media only screen and (max-width: 768px) {
+        text-align: center;
+      }
 
       //
       h1 {
@@ -203,4 +215,16 @@
       }
     }
   }
+}
+
+// BACKDROP
+.backdrop {
+  position: fixed;
+  background-color: rgba(black, 0.8);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
 }

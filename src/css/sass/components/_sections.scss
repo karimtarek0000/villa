@@ -7,7 +7,7 @@
     //
     &__step {
       position: relative;
-      transition: all 0.5s ease;
+      transition: all 0.5s ease !important;
 
       //
       &--shape {
@@ -32,7 +32,7 @@
       // HOVER
       @include DetectHover {
         &:hover {
-          transform: scale(1.02);
+          transform: scale(1.02) !important;
         }
 
         &:hover {
@@ -100,6 +100,13 @@
         position: absolute;
         bottom: 25%;
       }
+    }
+  }
+
+  //
+  &__wrapper-content {
+    @media only screen and (min-width: 1200px) {
+      padding: 0 8rem;
     }
   }
 

@@ -1,0 +1,56 @@
+html[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+
+  //
+  .header__content__images {
+    & img:nth-of-type(1) {
+      transform: translate(10vw, 25rem);
+
+      @include BreakPoint(sm) {
+        transform: translate(2rem, 2rem);
+      }
+    }
+  }
+
+  //
+  .how-works__steps__step {
+    //
+    &--shape {
+      &:not(:last-child) {
+        @extend .border-end, .border-rangitoto;
+        border-left: none !important;
+      }
+    }
+
+    @include DetectHover {
+      &:hover {
+        &:not(:last-child) {
+          border-color: var(--bs-equator) !important;
+        }
+      }
+    }
+
+    //
+    &--shape {
+      &:not(:last-child) {
+        &::after {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cg transform='translate(-977.079 -1122)'%3E%3Ccircle cx='20' cy='20' r='20' transform='translate(977.079 1122)' style='fill:%23e1c15d'/%3E%3Cpath d='m991.932 1142.433 7.859-7.859v15.717Z'/%3E%3C/g%3E%3C/svg%3E");
+          transform: translateY(-50%) rotate(180deg);
+          right: -2rem;
+          left: auto;
+        }
+      }
+    }
+  }
+
+  //
+  .about-app-2--images {
+    img {
+      &:nth-of-type(2) {
+        right: 15%;
+        left: auto;
+      }
+    }
+  }
+}

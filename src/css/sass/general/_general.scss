@@ -94,13 +94,22 @@ p {
     background-repeat: no-repeat;
     width: 20rem;
     height: 7rem;
-    top: 20%;
+    right: -1px;
+    top: 10%;
     animation: moveUpDown 2s ease-in-out infinite alternate;
   }
 
   &--left {
     &::after {
       left: 0;
+      right: auto;
+    }
+  }
+
+  &--special {
+    &::after {
+      left: 35%;
+      right: auto;
     }
   }
 }

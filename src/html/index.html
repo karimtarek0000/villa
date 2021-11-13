@@ -31,6 +31,7 @@
     <meta name="theme-color" content="#ffffff" />
     <!--  -->
     <link rel="stylesheet" href="./assets/css/library/owl.carousel.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Villa</title>
   </head>
@@ -39,26 +40,30 @@
       <!-- START HEADER -->
       <header style="height: 100vh">
         <!-- START NAVBAR -->
-        <nav class="navbar container mx-auto">
+        <nav
+          class="navbar container mx-auto"
+          data-aos="fade-down"
+          data-aos-duration="700"
+        >
           <!-- LOGO -->
           <a href="/" class="col-3 col-md-2">
             <img class="img-fluid" src="./assets/img/logo.svg" alt="logo" />
           </a>
-          <!-- ITEMS -->
+          <!-- START ITEMS -->
           <ul class="col-6 navbar__items d-flex flex-column flex-md-row m-0">
-            <li>
+            <li data-target="how-works" class="link">
               <svg class="svg__dim-1">
                 <use xlink:href="./assets/icons/sprite.svg#icon-question"></use>
               </svg>
               <span>كيف يعمل التطبيق</span>
             </li>
-            <li>
+            <li data-target="features-app" class="link">
               <svg class="svg__dim-1">
                 <use xlink:href="./assets/icons/sprite.svg#icon-features"></use>
               </svg>
               <span>مميزات التطبيق</span>
             </li>
-            <li>
+            <li data-target="screens-app" class="link">
               <svg class="svg__dim-1">
                 <use
                   xlink:href="./assets/icons/sprite.svg#icon-screens-app"
@@ -67,19 +72,27 @@
               <span>شاشات التطبيق</span>
             </li>
           </ul>
-          <!-- DOWNLOAD APP -->
+          <!-- END ITEMS -->
+
+          <!-- START DOWNLOAD APP -->
           <a
             style="width: 14.5rem; height: 5rem"
             class="col-md-2 btn btn-equator"
             href="javascript:void(0)"
             >تحميل التطبيق</a
           >
-          <!-- TOGGLE BUTTON -->
-          <button class="col-3 d-block d-md-none btn">
-            <svg class="svg__dim-1" style="fill: white">
+          <!-- END DOWNLOAD APP -->
+
+          <!-- START TOGGLE BUTTON -->
+          <button class="col-3 d-block d-md-none btn" id="toggle-sidebar">
+            <svg style="fill: white; width: 2.5rem; height: 2.5rem">
               <use xlink:href="./assets/icons/sprite.svg#icon-toggle"></use>
             </svg>
           </button>
+          <!-- END TOGGLE BUTTON -->
+
+          <!-- BACKDROP -->
+          <div class="backdrop"></div>
         </nav>
         <!-- END NAVBAR -->
 
@@ -96,7 +109,11 @@
             <!-- START CONTENT HEADER -->
             <div class="header__content row">
               <!-- START INFO -->
-              <div class="header__content__info col-sm-6">
+              <div
+                class="header__content__info col-sm-6"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <h1>فيلا بمميزات خاصة</h1>
                 <p>
                   تقدم الفيلا مجموعة من المميزات التي تجعلها مناسبة للجميع
@@ -139,7 +156,11 @@
                 </div>
               </div>
               <!-- END INFO -->
-              <div class="header__content__images col-sm-6">
+              <div
+                class="header__content__images col-sm-6"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <img src="./assets/img/4.webp" alt="2" />
                 <img src="./assets/img/2.webp" alt="2" />
               </div>
@@ -155,7 +176,12 @@
       <!-- START MAIN -->
       <main>
         <!-- START HOW WORKS -->
-        <section class="how-works" id="how-works">
+        <section
+          class="how-works add-shape"
+          id="how-works"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+        >
           <!-- START CONTAINER -->
           <div class="container">
             <!-- START HOW WORKS HEAD -->
@@ -170,7 +196,7 @@
               <div
                 class="col how-works__steps__step how-works__steps__step--shape"
               >
-                <div>
+                <div data-aos="fade-up">
                   <!--  -->
                   <svg style="width: 9rem; height: 8rem">
                     <use
@@ -187,7 +213,7 @@
               <div
                 class="col how-works__steps__step how-works__steps__step--shape"
               >
-                <div>
+                <div data-aos="fade-up" data-aos-delay="100">
                   <!--  -->
                   <svg style="width: 9rem; height: 8rem">
                     <use
@@ -204,7 +230,7 @@
               <div
                 class="col how-works__steps__step how-works__steps__step--shape"
               >
-                <div>
+                <div data-aos="fade-up" data-aos-delay="150">
                   <!--  -->
                   <svg style="width: 9rem; height: 8rem">
                     <use
@@ -221,7 +247,7 @@
               <div
                 class="col how-works__steps__step how-works__steps__step--shape"
               >
-                <div>
+                <div data-aos="fade-up" data-aos-delay="200">
                   <!--  -->
                   <svg style="width: 9rem; height: 8rem">
                     <use
@@ -243,21 +269,34 @@
         <!-- END HOW WORKS -->
 
         <!-- START ABOUT APP  -->
-        <section class="about-app" id="about-app">
+        <section
+          class="about-app add-shape add-shape--left"
+          id="about-app"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+        >
           <!-- START CONTAINER -->
           <div class="container">
             <div class="row flex-column flex-md-row align-items-center">
               <!-- START IMAGE -->
               <div class="col">
                 <div class="about-app__images">
-                  <img src="./assets/img/6.webp" alt="" />
-                  <img src="./assets/img/5.webp" alt="" />
+                  <img src="./assets/img/6.webp" data-aos="fade-up" alt="" />
+                  <img
+                    src="./assets/img/7.webp"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                    alt=""
+                  />
                 </div>
               </div>
               <!-- END IMAGE -->
 
               <!-- START HEAD -->
-              <div class="col col-md-8">
+              <div
+                class="col col-md-8 about-app__wrapper-content"
+                data-aos="fade-right"
+              >
                 <div class="about-app__head">
                   <h2>مكان مناسب ,, خدمة عالية مناسب للجميع</h2>
                   <p>
@@ -350,12 +389,17 @@
         <!-- END ABOUT APP  -->
 
         <!-- START ABOUT APP 2  -->
-        <section class="about-app about-app-2" id="about-app-2">
+        <section
+          class="about-app about-app-2 add-shape add-shape--special"
+          id="about-app-2"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+        >
           <!-- START CONTAINER -->
           <div class="container">
             <div class="row about-app-2--change">
               <!-- START HEAD -->
-              <div class="col col-lg-7">
+              <div class="col col-lg-7" data-aos="fade-right">
                 <div class="about-app__head">
                   <h2>تطبيق فريد ومميز لحجز فيلا North Vacation</h2>
                   <p>
@@ -408,8 +452,13 @@
               <!-- START IMAGE -->
               <div class="col-3">
                 <div class="about-app__images about-app-2--images">
-                  <img src="./assets/img/1.webp" alt="" />
-                  <img src="./assets/img/5.webp" alt="" />
+                  <img src="./assets/img/1.webp" data-aos="fade-up" alt="" />
+                  <img
+                    src="./assets/img/5.webp"
+                    data-aos="fade-left"
+                    data-aos-delay="300"
+                    alt=""
+                  />
                 </div>
               </div>
               <!-- END IMAGE -->
@@ -420,7 +469,12 @@
         <!-- END ABOUT APP 2  -->
 
         <!-- START FEATURES APP -->
-        <section class="how-works add-shape" id="features-app">
+        <section
+          class="how-works add-shape"
+          id="features-app"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+        >
           <!-- START CONTAINER -->
           <div class="container">
             <!-- START FEATURES APP HEAD -->
@@ -440,7 +494,7 @@
               "
             >
               <div class="col how-works__steps__step">
-                <div>
+                <div data-aos="fade-up">
                   <!--  -->
                   <svg style="width: 9rem; height: 8rem">
                     <use
@@ -455,7 +509,7 @@
                 </div>
               </div>
               <div class="col how-works__steps__step">
-                <div>
+                <div data-aos="fade-up" data-aos-delay="100">
                   <!--  -->
                   <svg style="width: 9rem; height: 8rem">
                     <use
@@ -470,7 +524,7 @@
                 </div>
               </div>
               <div class="col how-works__steps__step">
-                <div>
+                <div data-aos="fade-up" data-aos-delay="200">
                   <!--  -->
                   <svg style="width: 9rem; height: 8rem">
                     <use
@@ -494,8 +548,47 @@
         </section>
         <!-- END FEATURES APP -->
 
+        <!-- START SCREENS APP -->
+        <section
+          class="screens-app add-shape add-shape--left"
+          id="screens-app"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+        >
+          <!-- START CONTAINER -->
+          <div class="container">
+            <div class="screens-app__head head__sections">
+              <h2>شاشات التطبيق</h2>
+              <p>مجموعة متنوعة تبرز أهم شاشات التطبيق</p>
+            </div>
+            <!-- START SLIDER -->
+            <div class="owl-carousel set-arrows">
+              <div class="screens-app__item">
+                <img class="img-fluid" src="./assets/img/4.webp" alt="1" />
+              </div>
+              <div class="screens-app__item">
+                <img class="img-fluid" src="./assets/img/3.webp" alt="2" />
+              </div>
+              <div class="screens-app__item">
+                <img class="img-fluid" src="./assets/img/2.webp" alt="3" />
+              </div>
+              <div class="screens-app__item">
+                <img class="img-fluid" src="./assets/img/1.webp" alt="4" />
+              </div>
+            </div>
+            <!-- END SLIDER -->
+          </div>
+          <!-- END CONTAINER -->
+        </section>
+        <!-- END SCREENS APP -->
+
         <!-- START BOOKING -->
-        <section class="start-booking add-shape" id="start-booking">
+        <section
+          class="start-booking add-shape"
+          id="start-booking"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+        >
           <div class="container">
             <!--  -->
             <div class="start-booking__head">
@@ -535,35 +628,6 @@
           </div>
         </section>
         <!-- END BOOKING -->
-
-        <!-- START SCREENS APP -->
-        <section class="screens-app add-shape add-shape--left">
-          <!-- START CONTAINER -->
-          <div class="container">
-            <div class="screens-app__head head__sections">
-              <h2>شاشات التطبيق</h2>
-              <p>مجموعة متنوعة تبرز أهم شاشات التطبيق</p>
-            </div>
-            <!-- START SLIDER -->
-            <div class="owl-carousel set-arrows">
-              <div class="screens-app__item">
-                <img class="img-fluid" src="./assets/img/4.webp" alt="1" />
-              </div>
-              <div class="screens-app__item">
-                <img class="img-fluid" src="./assets/img/3.webp" alt="2" />
-              </div>
-              <div class="screens-app__item">
-                <img class="img-fluid" src="./assets/img/2.webp" alt="3" />
-              </div>
-              <div class="screens-app__item">
-                <img class="img-fluid" src="./assets/img/1.webp" alt="4" />
-              </div>
-            </div>
-            <!-- END SLIDER -->
-          </div>
-          <!-- END CONTAINER -->
-        </section>
-        <!-- END SCREENS APP -->
       </main>
       <!-- END MAIN -->
 
@@ -647,7 +711,7 @@
     </div>
     <script src="./assets/js/library/jquery.3.5.1.js"></script>
     <script src="./assets/js/library/owl.carousel.min.js"></script>
-    <script src="./assets/js/library/wow.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

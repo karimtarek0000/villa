@@ -10,13 +10,14 @@
 
 // Helpers
 @import "helpers/typography";
-@import "helpers/directions";
 
 // Components
 @import "components/layout";
 @import "components/sections";
 @import "components/slider";
 
+// 
+@import "general/rtl";
 // 
 @import "general/general";
 @import "general/base";
