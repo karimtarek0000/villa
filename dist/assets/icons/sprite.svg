@@ -78,7 +78,7 @@
 </symbol>
 <symbol id="icon-check" viewBox="0 0 32 32">
 <title>check</title>
-<path fill="#fff" style="fill: var(--color3, #fff)" d="M16 32c-8.837 0-16-7.163-16-16s7.163-16 16-16c8.837 0 16 7.163 16 16v0c0 8.837-7.163 16-16 16v0zM14.4 22.4l11.312-11.314-2.258-2.262-9.054 9.051-4.522-4.526-2.262 2.262z"></path>
+<path  d="M16 32c-8.837 0-16-7.163-16-16s7.163-16 16-16c8.837 0 16 7.163 16 16v0c0 8.837-7.163 16-16 16v0zM14.4 22.4l11.312-11.314-2.258-2.262-9.054 9.051-4.522-4.526-2.262 2.262z"></path>
 </symbol>
 <symbol id="icon-arrow-left" viewBox="0 0 16 32">
 <title>arrow-left</title>

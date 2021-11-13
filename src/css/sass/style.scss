@@ -4,6 +4,7 @@
 @import "general/breakPoint";
 @import "general/media";
 
+
 // Vendor
 @import "vendor/bootstrap5";
 
@@ -11,5 +12,11 @@
 @import "helpers/typography";
 @import "helpers/directions";
 
+// Components
+@import "components/layout";
+@import "components/sections";
+@import "components/slider";
+
 // 
+@import "general/general";
 @import "general/base";

@@ -1,0 +1,220 @@
+// START HOW WORKS
+.how-works {
+  padding: 8rem 0;
+
+  //
+  &__steps {
+    //
+    &__step {
+      position: relative;
+      transition: all 0.5s ease;
+
+      //
+      &--shape {
+        &:not(:last-child) {
+          @extend .border-start, .border-rangitoto;
+        }
+      }
+      & > div {
+        @extend .d-flex, .flex-column, .align-items-center;
+      }
+      svg {
+        @extend .mb-20;
+      }
+      &__info {
+        text-align: center;
+
+        p {
+          @extend .text-16, .text-silver;
+        }
+      }
+
+      // HOVER
+      @include DetectHover {
+        &:hover {
+          transform: scale(1.02);
+        }
+
+        &:hover {
+          &:not(:last-child) {
+            border-color: var(--bs-equator) !important;
+          }
+        }
+      }
+      //
+      &--shape {
+        &:not(:last-child) {
+          &::after {
+            content: "";
+            position: absolute;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cg transform='translate(-977.079 -1122)'%3E%3Ccircle cx='20' cy='20' r='20' transform='translate(977.079 1122)' style='fill:%23e1c15d'/%3E%3Cpath d='m991.932 1142.433 7.859-7.859v15.717Z'/%3E%3C/g%3E%3C/svg%3E");
+            top: 50%;
+            transform: translateY(-50%);
+            left: -2rem;
+            z-index: 9999;
+            background-size: cover;
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+      }
+      @media only screen and (max-width: 992px) {
+        &:nth-child(2) {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ABOUT APP
+.about-app {
+  $color: darken(white, 25%);
+  margin: 8rem 0;
+
+  //
+  &__images {
+    @extend .overflow-hidden,
+      .position-relative,
+      .d-flex,
+      .justify-content-center;
+    overflow: visible !important;
+
+    img {
+      @extend .img-fluid;
+      max-width: 25vw;
+      max-height: 90vh;
+      object-fit: contain;
+
+      @media only screen and (max-width: 762px) {
+        max-width: 50vw;
+      }
+
+      @media only screen and (min-width: 1500px) {
+        max-width: 16vw;
+      }
+
+      &:nth-of-type(2) {
+        position: absolute;
+        bottom: 25%;
+      }
+    }
+  }
+
+  //
+  &__head {
+    h2 {
+      @extend .col-lg-7;
+    }
+
+    p {
+      color: var(--bs-light);
+      margin-top: 3rem;
+    }
+  }
+
+  &__content {
+    margin-top: 4rem;
+
+    li {
+      margin-bottom: 2rem;
+
+      @include DetectHover {
+        &:hover svg {
+          fill: var(--bs-light);
+        }
+        &:hover p {
+          color: var(--bs-light);
+        }
+      }
+    }
+
+    p {
+      @extend .ms-5;
+      transition: color 0.5s ease;
+      color: $color;
+      margin: 0px;
+    }
+
+    svg {
+      transition: fill 0.5s ease;
+      fill: $color;
+    }
+  }
+
+  &-2 {
+    background-color: var(--bs-dark);
+    margin-top: 20rem;
+    padding: 4rem 0;
+    //
+    &--change {
+      @extend .flex-column,
+        .flex-md-row,
+        .align-items-center,
+        .justify-content-between;
+
+      @media only screen and (min-width: 762px) {
+        height: 51rem;
+      }
+
+      p {
+        @media (min-width: 762px) and (max-width: 992px) {
+          padding-inline-end: 14rem;
+        }
+      }
+    }
+
+    &--images {
+      transform: scale(1.4);
+
+      @media only screen and (max-width: 762px) {
+        transform: scale(1);
+        margin-top: 2rem;
+      }
+
+      @media only screen and (min-width: 762px) {
+        max-height: 35vw;
+      }
+
+      @media only screen and (min-width: 1500px) {
+        max-height: 26vw;
+      }
+
+      img {
+        &:nth-of-type(2) {
+          bottom: 2%;
+          left: 15%;
+        }
+      }
+    }
+  }
+}
+
+// START BOOKING
+.start-booking {
+  @extend .bg-codGray;
+  padding: 8rem 0;
+
+  //
+  &__head {
+    text-align: center;
+    p {
+      @extend .text-light, .text-18;
+      margin-top: 3rem;
+    }
+  }
+}
+
+// START SCREENS APP
+.screens-app {
+  padding: 8rem 0;
+  //
+  &__item {
+    img {
+      max-width: 40vw;
+      margin: 0 auto;
+    }
+  }
+}

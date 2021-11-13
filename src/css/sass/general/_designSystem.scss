@@ -45,9 +45,9 @@ $container-max-widths: (
 ////////////////////////////
 // Other
 // Prorperty Change Scroll Bar
-$colorTrack: null;
-$colorThumb: null;
-$widthTrack: null;
+$colorTrack: var(--bs-mine);
+$colorThumb: var(--bs-equator);
+$widthTrack: 5px;
 
 // Change Color Selection
-$colorSelection: null;
+$colorSelection: var(--bs-equator);

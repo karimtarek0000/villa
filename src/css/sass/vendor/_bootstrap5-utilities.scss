@@ -20,8 +20,9 @@ $utilities: map-merge(
       property: margin-inline-start,
       class: ms,
       values: (
-        4: 4rem,
+        5: 0.5rem,
         10: 1rem,
+        all: auto,
       ),
     ),
     "me": (
@@ -29,6 +30,7 @@ $utilities: map-merge(
       class: me,
       values: (
         10: 1rem,
+        all: auto,
       ),
     ),
     "mt": (
