@@ -62,7 +62,7 @@ const DEST_FOLDER = {
 // PRODUCTION
 const DEST_FOLDER_PRO = {
   style: `${DEST_FOLDER.style}/*.css`,
-  js: `${DEST_FOLDER.js}assets/*.js`,
+  js: `${DEST_FOLDER.js}/*.js`,
   html: "dist/**/*.html",
 };
 
@@ -242,7 +242,7 @@ const watcher = async () => {
 ///////////////////////////////////
 // EXPORTS
 // DEFAULT
-exports.default = parallel(
+exports.default = series(
   html,
   imageWebp,
   styleDev.bind(this, "sass"),
@@ -251,4 +251,4 @@ exports.default = parallel(
 );
 
 // BUILD
-exports.build = parallel(styleProd, jsProd);
+exports.build = series(styleProd, jsProd);
