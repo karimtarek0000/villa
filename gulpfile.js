@@ -109,7 +109,7 @@ const styleProd = () => {
   return src(DEST_FOLDER_PRO.style)
     .pipe(
       purgecss({
-        content: [DEST_FOLDER_PRO.html, DEST_FOLDER_PRO.js],
+        content: [DEST_FOLDER_PRO.html, "./dist/assets/js/**/*.js"],
       })
     )
     .pipe(prefixer())
