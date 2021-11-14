@@ -14,7 +14,6 @@ $(function () {
     dots: false,
     nav: true,
     rtl: getDir,
-    margin: 15,
     navText: [
       "<div class='prev-slide'></div>",
       "<div class='next-slide'></div>",
@@ -31,6 +30,7 @@ $(function () {
       },
       1200: {
         items: 4,
+        margin: 15,
       },
     },
   });

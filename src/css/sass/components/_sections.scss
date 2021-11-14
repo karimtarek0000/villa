@@ -74,6 +74,10 @@
   $color: darken(white, 25%);
   margin: 8rem 0;
 
+  @media only screen and (max-width: 768px) {
+    margin: 2rem 0;
+  }
+
   //
   &__images {
     @extend .overflow-hidden,
@@ -155,6 +159,10 @@
     background-color: var(--bs-dark);
     margin-top: 20rem;
     padding: 4rem 0;
+
+    @media only screen and (max-width: 768px) {
+      margin-top: 6rem;
+    }
     //
     &--change {
       @extend .flex-column,
@@ -217,6 +225,10 @@
 // START SCREENS APP
 .screens-app {
   padding: 8rem 0;
+
+  @media only screen and (max-width: 768px) {
+    padding: 2rem 0;
+  }
   //
   &__item {
     img {

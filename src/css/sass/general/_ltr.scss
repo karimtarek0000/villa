@@ -5,7 +5,7 @@ html[dir="ltr"] .ltr {
   //
   .header__content__images {
     & img:nth-of-type(1) {
-      transform: translate(10vw, 25rem);
+      transform: translate(12vw, 25rem);
 
       @include BreakPoint(sm) {
         transform: translate(2rem, 2rem);
